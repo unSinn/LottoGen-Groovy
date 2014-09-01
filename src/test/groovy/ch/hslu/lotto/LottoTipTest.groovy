@@ -13,4 +13,11 @@ class LottoTipTest {
 		tip.values.isEmpty()
 		assertEquals(6, tip.values.size())
 	}
+	
+	@Test
+	public void testGenerateList(){
+		def l = LottoTip.generateList(10)
+		assert l.size() == 10
+		assert l.unique().size() == 10
+	}
 }
